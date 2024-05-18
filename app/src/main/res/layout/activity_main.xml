@@ -14,34 +14,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="25dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="645dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#453DB8"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:menu="@menu/bottom_nav_menu"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="635dp">
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="54dp">
-
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#453DB8"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/bottom_nav_menu"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="635dp"></com.google.android.material.bottomnavigation.BottomNavigationView>
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="414dp"
+        android:layout_height="59dp"
         android:background="#453DB8"
         android:minHeight="?attr/actionBarSize"
         android:padding="0dp"
@@ -57,7 +48,29 @@
         android:layout_width="44dp"
         android:layout_height="54dp"
         android:src="@drawable/baseline_diamond_24"
-        tools:layout_editor_absoluteX="288dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/materialToolbar" />
+
+    <TextView
+        android:id="@+id/coins"
+        android:layout_width="66dp"
+        android:layout_height="38dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ViewSwitcher
+        android:layout_width="409dp"
+        android:layout_height="590dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="60dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kombinle.MainActivity
 import com.example.kombinle.RegisterActivity
 import com.example.kombinle.databinding.ActivityLoginBinding
 
@@ -35,8 +36,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun isValidCredentials(email: String, password: String): Boolean {
-        // Burada geçerli bir doğrulama mantığı uygulayabilirsiniz
-        // Örnek olarak sadece basit bir doğrulama yapalım
+
         return email == "example@example.com" && password == "123456"
     }
 }
