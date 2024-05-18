@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinAndroid)
 }
 
+
 android {
     namespace = "com.example.kombinle"
     compileSdk = 34
@@ -24,6 +25,10 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+        }
+        buildFeatures{
+            viewBinding = true
+            compose = true
         }
     }
     compileOptions {

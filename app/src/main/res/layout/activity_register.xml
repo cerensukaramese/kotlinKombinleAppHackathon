@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#C7AAE1"
+tools:context="RegisterActivity">
+
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="294dp"
+    android:layout_height="72dp"
+    android:rotationX="-360"
+    android:text="Kayıt Olun"
+    android:textAlignment="center"
+    android:textColor="#453DB8"
+    android:textSize="48sp"
+    android:textStyle="bold|italic"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.498"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.241" />
+
+<EditText
+    android:id="@+id/kayiteditTextTextEmailAddress"
+    android:layout_width="220dp"
+    android:layout_height="53dp"
+    android:background="@drawable/edittextarkaplan"
+    android:ems="10"
+    android:hint="     e-mailiniz?"
+    android:inputType="textEmailAddress"
+    app:layout_constraintBottom_toTopOf="@+id/kayiteditTextTextPassword2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.497"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/textView"
+    app:layout_constraintVertical_bias="0.84" />
+
+<EditText
+    android:id="@+id/kayiteditTextTextPassword2"
+    android:layout_width="224dp"
+    android:layout_height="53dp"
+    android:background="@drawable/edittextarkaplan"
+    android:ems="10"
+    android:hint="      şifreniz?"
+    android:inputType="textPassword"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView"
+    app:layout_constraintVertical_bias="0.326" />
+
+<Button
+    android:id="@+id/kayitbutton3"
+    android:layout_width="174dp"
+    android:layout_height="57dp"
+    android:layout_marginTop="41dp"
+    android:layout_marginEnd="119dp"
+    android:layout_marginBottom="212dp"
+    android:text="Kombine başla!"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/kayiteditTextTextPassword2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
 package com.example.kombinle
 
-class WelcomeActivity {
+class ProfileActivity {
 }
