@@ -1,4 +1,5 @@
 plugins {
+    id("kotlin-android")
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 }
@@ -39,9 +40,14 @@ android {
         jvmTarget = "1.8"
     }
 }
+kotlin {
+    version = "1.7.20"
+}
 
 dependencies {
-
+    implementation  ("androidx.compose.ui:ui:1.0.0")
+    implementation ("androidx.compose.material:material:1.0.0")
+    implementation ("androidx.compose.runtime:runtime:1.0.0")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
