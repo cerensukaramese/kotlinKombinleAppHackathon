@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "54067980339",
+    "project_id": "kombinle-45732",
+    "storage_bucket": "kombinle-45732.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54067980339:android:d559981668e2f44cea1b46",
+        "android_client_info": {
+          "package_name": "com.example.kombinle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAy2--L9x6-N-2nxt_JQmJJIh-p3nC4q4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

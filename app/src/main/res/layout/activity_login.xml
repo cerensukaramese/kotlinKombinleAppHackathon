@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C7AAE1"
-    android:backgroundTint="#D8B8EC"
-    tools:context="LoginActivity">
+    tools:context=".LoginActivity">
 
 
     <TextView
@@ -31,10 +30,11 @@
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="220dp"
         android:layout_height="53dp"
+        android:paddingLeft="15dp"
         android:layout_marginBottom="122dp"
         android:background="@drawable/edittextarkaplan"
         android:ems="10"
-        android:hint="     e-mailiniz?"
+        android:hint="e-mailiniz?"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/kayitbtn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,6 +44,7 @@
         app:layout_constraintVertical_bias="0.946" />
 
     <EditText
+        android:paddingLeft="15dp"
         android:id="@+id/editTextTextPassword2"
         android:layout_width="224dp"
         android:layout_height="53dp"
@@ -51,7 +52,7 @@
         android:layout_marginBottom="328dp"
         android:background="@drawable/edittextarkaplan"
         android:ems="10"
-        android:hint="      şifreniz?"
+        android:hint="şifreniz?"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

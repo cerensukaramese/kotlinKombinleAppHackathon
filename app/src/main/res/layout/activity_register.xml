@@ -5,7 +5,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="#C7AAE1"
-tools:context="RegisterActivity">
+tools:context=".RegisterActivity">
 
 
 <TextView
@@ -29,9 +29,10 @@ tools:context="RegisterActivity">
     android:id="@+id/kayiteditTextTextEmailAddress"
     android:layout_width="220dp"
     android:layout_height="53dp"
+    android:paddingLeft="15dp"
     android:background="@drawable/edittextarkaplan"
     android:ems="10"
-    android:hint="     e-mailiniz?"
+    android:hint="e-mailiniz?"
     android:inputType="textEmailAddress"
     app:layout_constraintBottom_toTopOf="@+id/kayiteditTextTextPassword2"
     app:layout_constraintEnd_toEndOf="parent"
@@ -42,11 +43,12 @@ tools:context="RegisterActivity">
 
 <EditText
     android:id="@+id/kayiteditTextTextPassword2"
+    android:paddingLeft="15dp"
     android:layout_width="224dp"
     android:layout_height="53dp"
     android:background="@drawable/edittextarkaplan"
     android:ems="10"
-    android:hint="      şifreniz?"
+    android:hint=" şifreniz?"
     android:inputType="textPassword"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"

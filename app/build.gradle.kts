@@ -1,5 +1,6 @@
 plugins {
     id("kotlin-android")
+    id("com.google.gms.google-services")
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
 }
@@ -8,6 +9,9 @@ plugins {
 android {
     namespace = "com.example.kombinle"
     compileSdk = 34
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.1"
+    }
 
     defaultConfig {
         applicationId = "com.example.kombinle"
@@ -41,13 +45,15 @@ android {
     }
 }
 kotlin {
-    version = "1.7.20"
+    version = "1.9.0"
 }
 
 dependencies {
-    implementation  ("androidx.compose.ui:ui:1.0.0")
-    implementation ("androidx.compose.material:material:1.0.0")
-    implementation ("androidx.compose.runtime:runtime:1.0.0")
+    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-database")
+    implementation("androidx.compose.runtime:runtime:1.5.1")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

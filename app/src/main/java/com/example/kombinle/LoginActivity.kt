@@ -1,42 +1,48 @@
+package com.example.kombinle
+
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.kombinle.MainActivity
-import com.example.kombinle.RegisterActivity
-import com.example.kombinle.databinding.ActivityLoginBinding
-
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 class LoginActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityLoginBinding
+
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_login)
 
-        binding.girisbtn.setOnClickListener {
-            val email = binding.editTextTextEmailAddress.text.toString()
-            val password = binding.editTextTextPassword2.text.toString()
+        auth = FirebaseAuth.getInstance()
 
-            // Kullanıcı adı ve şifreyi kontrol et, geçerli ise ana ekrana geçiş yap
-            if (isValidCredentials(email, password)) {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            } else {
-                // Geçersiz giriş, kullanıcıya hata mesajı göster
-                binding.editTextTextEmailAddress.error = "Geçersiz e-posta veya şifre"
-            }
+        val loginButton = findViewById<Button>(R.id.girisbtn)
+        val registerButton = findViewById<Button>(R.id.kayitbtn)
+
+        loginButton.setOnClickListener {
+            signIn()
         }
 
-        binding.kayitbtn.setOnClickListener {
-            // Kayıt ekranına geçiş yap
+        registerButton.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
     }
 
-    private fun isValidCredentials(email: String, password: String): Boolean {
+    private fun signIn() {
+        val email = findViewById<EditText>(R.id.editTextTextEmailAddress).text.toString()
+        val password = findViewById<EditText>(R.id.editTextTextPassword2).text.toString()
 
-        return email == "example@example.com" && password == "123456"
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val user = auth.currentUser
+                    Toast.makeText(this, "Giriş başarılı!", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Giriş başarısız!", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }

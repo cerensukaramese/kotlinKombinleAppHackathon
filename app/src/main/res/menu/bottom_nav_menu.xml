@@ -8,7 +8,7 @@
         android:icon ="@drawable/arti"
         android:title="Kombinle!" />
     <item
-        android:id="@+id/action_profile"
+        android:id="@+id/profileItem"
         android:icon="@drawable/baseline_account_circle_24"
         android:title="Profil" />
 </menu>

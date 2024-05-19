@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#C7AAE1"
     android:backgroundTint="#D8B8EC"
-    tools:context="MainActivity">
+    tools:context=".MainActivity">
 
 
     <androidx.cardview.widget.CardView
@@ -69,8 +69,10 @@
     <ViewSwitcher
         android:layout_width="409dp"
         android:layout_height="590dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="60dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="60dp">
+
+    </ViewSwitcher>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
